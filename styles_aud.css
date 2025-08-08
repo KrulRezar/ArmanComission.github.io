@@ -1,0 +1,273 @@
+/* Reset and Basics */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #191919;
+    color: #fff;
+}
+  
+a {
+    color: #fff;
+    text-decoration: none;
+}  
+
+
+/* Header */ 
+.hero-section{
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* prevents image from repeating */
+  width: 100%;                   /* full width of the page */           
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  background-color:#FF3131;
+}
+.hero-text-section {
+  position: relative;
+  bottom: 10px;        
+  font-size: 96px;     
+  font-weight: bold;
+  margin-left: 60px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  gap: 50px;
+  
+}
+.container a {
+  margin-top: 50px;
+  
+  background-color: #FF3131;
+  padding: 5px 40px 5px 40px;
+  border:solid  transparent;
+  font-size: 48px;
+}
+.hollow-text{
+  color:transparent;
+  -webkit-text-stroke: 2px white; 
+}
+/* Navbar styling */
+.navbar {
+display: flex;                          /* Enable flexbox for the navbar */
+justify-content: space-between;         /* Horizontally center the nav content */
+align-items: center;                    /* Vertically center the nav content */
+width: 100%;                            /* Ensure it takes the full width */
+position: absolute;                        /* Keep the navbar fixed at the top */
+top: 0;                                 /* Position it at the top */
+left: 0;                                /* Align it to the left */
+padding: 10px 20px;                     /* Add padding */
+z-index: 10;                            /* Ensure navbar stays above other content */
+}
+
+/* Nav content wrapper */
+.nav-content {
+display: flex;                     /* Enable flexbox for the nav content */
+justify-content: space-between;     /* Space between logo, nav links, and search bar */
+width: 100%;                        /* Ensure it takes the full width */
+align-items: center;               /* Vertically center the items */
+margin-left: 40px;
+margin-right: 100px;
+}
+
+/* Logo styling */
+.logo {
+font-size: 32px;
+font-weight: bold;
+font-weight: 900px;
+color: white;
+}
+
+.logo:hover {  
+color: #5CE1E6;
+}
+/* nav links */
+.nav-links {
+display: flex;                     
+gap: 50px;                         
+font-weight: 700px;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-size: 18px;
+}
+
+.nav-links a:hover {
+color: #FF3131;
+}
+
+
+
+.FAQ-container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .FAQ-container-item {
+    background-color: #2F2E35;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+    transition: background 0.3s;
+  }
+
+  .FAQ-container-item:hover {
+    background-color: #e0e0e0;
+  }
+
+  .FAQ-answer {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+
+  .FAQ-container-item.active + .FAQ-answer {
+    max-height: 200px; /* Adjust based on expected answer size */
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+  }
+
+/* */
+.container {
+  display: flex;
+}
+
+
+
+/* This shi is the form*/
+.form-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-section > span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.audition-type {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.audition-type span {
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.type-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.type-btn:hover {
+  background: #eee;
+}
+
+.type-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-section {
+  display: inline-block; 
+  padding: 2rem;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 100%; 
+  inline-size: fit-content; 
+  block-size: fit-content;  
+  
+}
+
+.audition-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: #ffffff;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+
+label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="file"] {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.confirm-btn {
+  align-self: flex-start;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background: #218838;
+}

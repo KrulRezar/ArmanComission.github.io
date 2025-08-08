@@ -1,0 +1,605 @@
+/* Reset and Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: #191919;
+  color: #fff;
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/*------------------------------------*/
+/*            HERO SECTION             */
+/*------------------------------------*/
+.hero-section {
+  background: url(res/nav_img.jpg) center/cover no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  animation: fadeInZoom 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+/*------------------------------------*/
+/*         ABOUT HERO SECTION          */
+/*------------------------------------*/
+.About-hero-section {
+  background: url(res/About.png) center/cover no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.group-container {
+  margin: 550px 70px;
+  justify-content: end;
+  align-items: flex-start; /* Align items to left (X-axis) */
+  text-align: left; /* Left align text */
+  padding: 1rem; /* Optional spacing */
+}
+
+.hollow-text,
+.hollow-text-3 {
+  font-family: 'Arial', sans-serif;
+  font-size: 96px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 2px;
+}
+
+.hollow-text {
+  -webkit-text-stroke-color: #5CE1E6;
+}
+
+.hollow-text-3 {
+  -webkit-text-stroke-color: #FF2E2E;
+}
+
+.hollow-text-2 {
+  font-size: 96px;
+  font-weight: bold;
+  color: #FF2E2E;
+}
+
+/*------------------------------------*/
+/*             NAVBAR                  */
+/*------------------------------------*/
+.navbar {
+  animation: fadeSlideDown 0.8s ease-out forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 70px 0 40px;
+}
+
+.logo img,
+.logo {
+  height: 39px;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #5CE1E6;
+}
+
+.nav-links {
+  display: flex;
+  gap: 80px;
+  font-weight: 700;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideDown 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.nav-links a:hover {
+  color: #5CE1E6;
+}
+
+.nav-links a.active {
+  color: #5CE1E6;
+}
+
+/*------------------------------------*/
+/*          HERO TEXT ANIMATIONS       */
+/*------------------------------------*/
+.hero-text-section span,
+.hero-text-section a {
+  opacity: 0;
+}
+
+.hero-text-1 {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-text-2 {
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  color: #FF3131;
+}
+
+.hero-text-3 {
+  font-size: 24px;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+.hero-text-section a {
+  margin-top: 40px;
+  font-size: 36px;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  animation: fadeSlideUp 0.8s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+/*------------------------------------*/
+/*        CONTACT PAGE SECTION         */
+/*------------------------------------*/
+.contact-page-section {
+  background-image: url(res/CONTACTSBG.png);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* Footer on Contacts Page */
+.footer-content-contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 35vh;
+  background-color: #FF2E2E;
+  color: white;
+  padding: 40px;
+  text-align: left;
+}
+
+.footer-content-upper-row {
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-left-container,
+.footer-right-container,
+.left-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-container {
+  align-items: center;
+}
+
+.footer-right-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerContactsLogo {
+  width: 302px;
+  height: 250px;
+}
+
+/* Contact Navbar */
+.cont-navbar {
+  background-color: #2F2E35;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.c-container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: fit-content;
+}
+
+.c-sub-container-1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+  font-size: 96px;
+}
+
+.c-sub-container-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+
+.c-item-top-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.c-item {
+  padding: 5px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box; /* prevents padding overflow */
+}
+
+.c-item button {
+  align-self: center;
+  height: 38px;
+  border: solid 2px white;
+  background-color: #191919;
+  color: #FFFFFF;
+  width: 60%;
+}
+
+.c-container input {
+  width: 100%;
+  height: 60%;
+}
+
+/*------------------------------------*/
+/*          AUDITION SECTION           */
+/*------------------------------------*/
+.audition-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-group-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF3131;
+  color: white;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.aud-text-1 {
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 600;
+  animation: slideDown 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.aud-text-2 {
+  font-size: 24px;
+  animation: slideUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.container-aud {
+  width: 100%;
+  height: 100%;
+  background: url(res/AUDITION_IMG.png) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.aud-audition-now {
+  margin-bottom: 60px;
+}
+
+.aud-audition-now a {
+  padding: 15px 30px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeScaleIn 0.8s ease-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+/*------------------------------------*/
+/*          STUDIO SECTION             */
+/*------------------------------------*/
+.studio-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #191919;
+  color: #5CE1E6;
+}
+
+.STU_TEXT_GROUP {
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.STU_TEXT_1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.STU_TEXT_GROUP img {
+  height: 85px;
+  transform: translateY(20px);
+}
+
+.panel-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.panel-row img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.STU_LINK_BTN a {
+  padding: 15px 40px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.STU_LINK_BTN a:hover {
+  font-weight: bold;
+}
+
+/*------------------------------------*/
+/*          CONTACT SECTION            */
+/*------------------------------------*/
+.contact-section {
+  height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.CON_LEFT {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align content to right */
+}
+
+.CON_LEFT p {
+  color: #5CE1E6;
+  font-size: 96px;
+  font-weight: bold;
+}
+
+.CON_RIGHT {
+  flex: 1;
+  font-size: 24px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid white;
+  background-color: #191919;
+  color: white;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.message-box {
+  width: 100%; /* Expand textarea width */
+  background-color: #2F2E35;
+  border: 1px solid rgb(153, 153, 153);
+  color: white;
+  font-size: 16px;
+}
+
+/*------------------------------------*/
+/*          FOOTER SECTION             */
+/*------------------------------------*/
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  width: 100%;
+  height: 25vh;
+  background-color: #FF2E2E;
+  color: white;
+  padding: 40px;
+  text-align: left;
+}
+
+.footer h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.footer-content a,
+.footer-content a:visited,
+.footer-content a:hover,
+.footer-content a:active {
+  text-decoration: none;  /* remove underline */
+  color: white;           /* white text */
+}
+
+/*------------------------------------*/
+/*          ANIMATIONS                 */
+/*------------------------------------*/
+@keyframes fadeInZoom {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*------------------------------------*/
+/*          RESPONSIVE DESIGN          */
+/*------------------------------------*/
+@media screen and (max-width: 768px) {
+  .hero-text-1,
+  .hero-text-2,
+  .hollow-text,
+  .hollow-text-2,
+  .hollow-text-3 {
+    font-size: 48px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .group-container {
+    margin: 200px 30px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .c-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-content-contacts {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+}

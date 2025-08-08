@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UY RECORDS</title>
+
+  <!-- External CSS and Fonts -->
+  <link rel="stylesheet" href="form.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="res/MainLogo.png"/>
+</head>
+
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+      <div class="nav-content">
+        <a href="index.html" class="logo">UY RECORDS</a>
+        <nav class="nav-links">
+          <a href="about.html">ABOUT</a>
+          <a href="artists.html">ARTISTS</a>
+          <a href="auditions.html">AUDITIONS</a>
+          <a href="studios.html">STUDIOS</a>
+          <a href="contact.html">CONTACTS</a>
+        </nav>
+      </div>
+      <div class="nav-text">
+        <span>AUDITION AT&nbsp;</span>
+        <span class="hollow-text">UYRE</span>
+      </div>
+    </header>
+
+    <!-- AUDITION FORM SECTION -->
+    <section class="container">
+      <form action="/ArmanProject/includes/form.php" method="post" enctype="multipart/form-data">
+        
+        <!-- CATEGORY SELECTION -->
+        <div class="aud-sub-container">
+          <div class="aud-item">
+            <input type="radio" id="global" name="category" value="GLOBAL" required />
+            <label for="global">
+              <img class="icon default" src="res/global.png" alt="global icon" style="width: 42px;"/>
+              <img class="icon selected" src="res/global-active.png" alt="global selected icon" style="width: 42px;"/>
+              GLOBAL
+            </label>
+          </div>
+
+          <div class="aud-item">
+            <input type="radio" id="local" name="category" value="LOCAL" />
+            <label for="local">
+              <img class="icon default" src="res/local.png" alt="local icon" style="width: 42px;"/>
+              <img class="icon selected" src="res/local-active.png" alt="local selected icon" style="width: 42px;"/>
+              LOCAL
+            </label>
+          </div>
+        </div>
+
+        <!-- PERSONAL DETAILS -->
+        <div class="sub-container">
+          <div class="sub-item">
+            <label for="firstname">FIRST NAME</label>
+            <input type="text" id="firstname" name="firstname" required />
+          </div>
+          <div class="sub-item">
+            <label for="middleInitial">MIDDLE INITIAL</label>
+            <input type="text" id="middleInitial" name="middleInitial" maxlength="1" />
+          </div>
+          <div class="sub-item">
+            <label for="lastname">LAST NAME</label>
+            <input type="text" id="lastname" name="lastname" required />
+          </div>
+        </div>
+
+        <div class="sub-container">
+          <div class="sub-item-2">
+            <label for="email">E-MAIL</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="sub-item">
+            <label for="nationality">NATIONALITY</label>
+            <input type="text" id="nationality" name="nationality" required />
+          </div>
+          <div class="sub-item">
+            <label for="dob">DATE OF BIRTH</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+        </div>
+
+        <div class="sub-container">
+          <div class="sub-item-2">
+            <label for="gender">GENDER</label>
+            <input type="text" id="gender" name="gender" required />
+          </div>
+          <div class="sub-item">
+            <label for="height">HEIGHT</label>
+            <input type="number" id="height" name="height" required placeholder="centimeters" />
+          </div>
+          <div class="sub-item">
+            <label for="weight">WEIGHT</label>
+            <input type="number" id="weight" name="weight" required placeholder="kilograms" />
+          </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="sub-container">
+          <div class="sub-item">
+            <label for="country_code">COUNTRY CODE</label>
+            <input type="text" id="country_code" name="country_code" required />
+          </div>
+          <div class="sub-item">
+            <label for="mobile">MOBILE NUMBER</label>
+            <input type="tel" id="mobile" name="mobile" required />
+          </div>
+          <div class="sub-item">
+            <label for="social_link">SOCIAL LINK</label>
+            <input type="url" id="social_link" name="social_link" />
+          </div>
+        </div>
+
+        <!-- FILE UPLOADS -->
+        <div class="sub-container">
+          <div class="sub-item">
+            <label for="profile1">PROFILE 1</label>
+            <input type="file" id="profile1" name="profile1" accept="image/*" required />
+          </div>
+          <div class="sub-item">
+            <label for="profile2">PROFILE 2</label>
+            <input type="file" id="profile2" name="profile2" accept="image/*" required />
+          </div>
+          <div class="sub-item">
+            <label for="profile3">PROFILE 3</label>
+            <input type="file" id="profile3" name="profile3" accept="image/*" required />
+          </div>
+        </div>
+
+        <div class="sub-container">
+          <div class="sub-item">
+            <label for="vocal_sample">VOCAL SAMPLE</label>
+            <input type="file" id="vocal_sample" name="vocal_sample" accept="audio/*" required />
+          </div>
+          <div class="sub-item">
+            <label for="performance_sample">PERFORMANCE SAMPLE</label>
+            <input type="file" id="performance_sample" name="performance_sample" accept="video/*" required />
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="submit">CONFIRM</button>
+      </form>
+    </section>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer-section">
+    
+    <div class="footer-content">
+
+      <!-- Contact Info -->
+      <div class="contact-info" style="color: white;">
+        <span style="font-size: 48px; font-weight: bold;">UY RECORDS&ENTERTAINMENT</span>
+        <p>
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="https://maps.app.goo.gl/CeYNwaDpe9FM5KpA6" target="_blank">
+            312 Ignacia Street, Tullahan Road, Santa Quiteria Rd, Caloocan, 1400 Metro Manila
+          </a>
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:yrecordsmangment2023@gmail.com">
+            uyrecordsmangment2023@gmail.com
+          </a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+639760089750">976 - 008 - 9750</a>
+        </p>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/uyrecordsent" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/Boss_StudioRBLX" target="_blank" aria-label="X (Twitter)">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/uyrecordsentertainment/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/records-uy-128648209/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("save-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const message = document.getElementById("message-box").value;
+      localStorage.setItem("userMessage", message);
+      window.location.href = "contact.html";
+    });
+  </script>
+</body>
+</html>

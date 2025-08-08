@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UY RECORDS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="res/MainLogo.png" />
+</head>
+
+<body>
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="res/MainLogo.png" alt="UYRE Logo" />
+        </a>
+        <nav class="nav-links">
+          <a href="about.html">ABOUT</a>
+          <a href="artists.html">ARTISTS</a>
+          <a href="auditions.html">AUDITIONS</a>
+          <a href="studios.html">STUDIOS</a>
+          <a href="contact.html">CONTACTS</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero-text-section">
+      <span class="hero-text-1">SUPPORTING THE</span>
+      <span class="hero-text-2">GROWTH OF OPM</span><br />
+      <span class="hero-text-3">
+        UYRE aspires to bring a sustainable system for aspiring Filipino artists.
+      </span><br />
+      <a href="about.html">LEARN MORE</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- AUDITION SECTION -->
+    <section class="audition-section">
+      <div class="text-group-1">
+        <span class="aud-text-1">SHOOT YOUR SHOT!</span><br />
+        <span class="aud-text-2">TAKE YOUR CHANCE ON BECOMING THE NEXT MUSIC SENSATION</span>
+      </div>
+      <div class="container-aud">
+        <div class="aud-audition-now">
+          <a href="auditions.html">AUDITION NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO SECTION -->
+    <section class="studio-section">
+      <div class="STU_TEXT_GROUP">
+        <h2 class="STU_TEXT_1">FILM, RECORD, & REHEARSE AT</h2>
+        <img src="res/MainLogo.png" alt="UYRE Logo" />
+      </div>
+      <div class="panel-row">
+        <img src="res/PANEL 1.png" alt="Panel 1" />
+        <img src="res/PANEL 2.png" alt="Panel 2" />
+      </div>
+      <div class="STU_LINK_BTN">
+        <a href="studios.html">BOOK A STUDIO</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer-section">
+    <!-- Contact Call-to-Action -->
+    <section class="contact-section">
+      <div class="CON_LEFT">
+        <p>LET'S MAKE <br />IT HAPPEN!</p>
+      </div>
+      <div class="CON_RIGHT">
+        <form id="save-form" class="contact-form">
+          <label for="message-box" class="form-label">Send us a message</label><br />
+          <textarea id="message-box" name="message" class="message-box form-textarea" rows="8" required></textarea>
+          <div class="submit-container">
+            <button type="submit">SAVE & GO TO FORM</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Info -->
+    <div class="footer-content">
+      <div class="contact-info" style="color: white;">
+        <span style="font-size: 48px; font-weight: bold;">UY RECORDS & ENTERTAINMENT</span>
+        <p><i class="fas fa-map-marker-alt"></i>
+          <a href="https://maps.app.goo.gl/CeYNwaDpe9FM5KpA6" target="_blank">
+            312 Ignacia Street, Tullahan Road, Santa Quiteria Rd, Caloocan, 1400 Metro Manila
+          </a>
+        </p>
+        <p><i class="fas fa-envelope"></i>
+          <a href="mailto:uyrecordsmangment2023@gmail.com">
+            uyrecordsmangment2023@gmail.com
+          </a>
+        </p>
+        <p><i class="fas fa-phone"></i>
+          <a href="tel:+639760089750">976 - 008 - 9750</a>
+        </p>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/uyrecordsent" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/Boss_StudioRBLX" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/uyrecordsentertainment/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/records-uy-128648209/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script: Save message to localStorage and redirect -->
+  <script>
+    document.getElementById("save-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const message = document.getElementById("message-box").value;
+      localStorage.setItem("userMessage", message);
+      window.location.href = "contact.html";
+    });
+  </script>
+</body>
+</html>

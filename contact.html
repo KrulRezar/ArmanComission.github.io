@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UY RECORDS</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="res/MainLogo.png">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- ================= HERO SECTION ================= -->
+  <section class="contact-page-section">
+
+    <!-- ============ NAVIGATION BAR ============ -->
+    <header class="cont-navbar">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <img src="res/MainLogo.png" alt="UYRE Logo">
+        </a>
+        <nav class="nav-links">
+          <a href="about.html">ABOUT</a>
+          <a href="artists.html">ARTISTS</a>
+          <a href="auditions.html">AUDITIONS</a>
+          <a href="studios.html">STUDIOS</a>
+          <a href="contact.html" style="color: #FF2E2E;">CONTACTS</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ============ MAIN CONTACT CONTENT ============ -->
+    <main class="c-container">
+      <!-- LEFT TEXT SIDE -->
+      <div class="c-sub-container-1">
+        <span style="color: #5CE1E6;">WORK</span>
+        <span style="color: #5CE1E6;">WITH</span>
+        <span class="hollow-text-3">UYRE</span>
+      </div>
+
+      <!-- CONTACT FORM SIDE -->
+      <div class="c-sub-container-2">
+        <form method="POST" action="includes/send_email.php">
+          <div class="c-item-top-row">
+            <div class="c-item">
+              <label for="name-company">NAME/COMPANY</label>
+              <input type="text" id="name-company" name="name-company" class="message-box">
+            </div>
+            <div class="c-item">
+              <label for="e-mail">E-MAIL</label>
+              <input type="text" id="e-mail" name="e-mail" class="message-box">
+            </div>
+          </div>
+
+          <div class="c-item">
+            <label for="message">YOUR MESSAGE</label>
+            <textarea id="message" name="message" class="message-box" rows="8" required></textarea>
+            <button type="submit">SEND YOUR MESSAGE</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-section">
+    <!-- Upper Row with Info -->
+    <div class="footer-content-upper-row">
+      <div class="footer-left-container">
+        <div class="left-container">
+          <span>VISIT US AT</span>
+          <img src="res/contactsLogo.png" alt="Contacts Logo" class="footerContactsLogo">
+        </div>
+      </div>
+      <div class="footer-right-container">
+        <span>Business Hours: Monday to Friday | 8AM - 10PM</span><br>
+        <span>312 Ignacia Street, Tullahan Road, Santa Quiteria Rd.</span><br>
+        <span>Caloocan, 1400 Metro Manila</span>
+      </div>
+    </div>
+
+    <!-- Contact Details and Social Icons -->
+    <div class="footer-content-contacts">
+      <div class="contact-info" style="color: white;">
+        <span style="font-size: 48px; font-weight: bold;">UY RECORDS & ENTERTAINMENT</span>
+        <p><i class="fas fa-map-marker-alt"></i>
+          <a href="https://maps.app.goo.gl/CeYNwaDpe9FM5KpA6" target="_blank">
+            312 Ignacia Street, Tullahan Road, Santa Quiteria Rd, Caloocan, 1400 Metro Manila
+          </a>
+        </p>
+        <p><i class="fas fa-envelope"></i>
+          <a href="mailto:uyrecordsmangment2023@gmail.com">uyrecordsmangment2023@gmail.com</a>
+        </p>
+        <p><i class="fas fa-phone"></i>
+          <a href="tel:+639760089750">976 - 008 - 9750</a>
+        </p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/uyrecordsent" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/Boss_StudioRBLX" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/uyrecordsentertainment/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/records-uy-128648209/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT: Restore Drafted Message ================= -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const messageBox = document.getElementById("message");
+      const savedMessage = localStorage.getItem("userMessage");
+
+      if (messageBox && savedMessage) {
+        messageBox.value = savedMessage;
+        localStorage.removeItem("userMessage");
+      }
+    });
+  </script>
+</body>
+</html>

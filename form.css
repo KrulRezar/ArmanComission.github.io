@@ -1,0 +1,257 @@
+/* Reset and Basics */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+	
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+	background-color: #191919;
+	color: #fff;
+}
+	
+.hero-section {
+	background-color: #191919;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-weight: bold;
+	text-align: center;
+	
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	flex-direction: column;
+	background-color: #FF2E2E;
+	height: 280px;
+	justify-content: space-between;
+	padding: 10px 20px;
+	width: 100%;
+}
+
+.nav-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 70px 0 40px;
+		
+}
+
+.logo {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 32px; 
+	text-decoration: none; 
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+}
+.logo:hover {
+	color: #5CE1E6;
+}
+
+.nav-links {
+	display: flex;
+	gap: 80px;
+	font-weight: 700;
+}
+
+.nav-links a {
+	font-family: 'Arial', sans-serif;
+	text-decoration: none;
+	font-size: 28px;
+	color: white;
+}
+
+.nav-links a:hover {
+	font-family: 'Arial', sans-serif;
+	color: #5CE1E6;
+}
+.hollow-text{
+	font-family: 'Arial', sans-serif;
+	color:transparent;
+	-webkit-text-stroke: 2px white; 
+}
+.navbar span {
+	justify-content: center;
+	text-align: center;
+	font-size: 128px;
+}
+.nav-text {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px; /* space between the spans */
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+/*------------------------------------GENERAL STYLES------------------------------------*/
+.container {
+	background-color: #191919;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	width: 800px;
+	height: 100%;
+}
+
+.aud-sub-container {
+	gap: 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.aud-item{
+	width: 100%;
+	background-color: #FF3131;
+	font-size: 32px;
+	display: flex;
+	padding: 8px;
+	border: solid 1px white;
+}
+.aud-item:has(input[type="radio"]:checked) {
+	background-color: white;
+	color: black;
+	border-color: white;
+}
+.icon.selected {
+	display: none;
+}
+
+input[type="radio"] + label .selected { 
+	display: none;
+}
+
+input[type="radio"]:checked + label .default {
+	display: none;
+}
+
+input[type="radio"]:checked + label .selected {
+	display: inline;
+}
+
+
+.sub-container {
+	padding: 4px;    
+	display: flex;
+	flex-direction: row;
+	/* justify-items doesn't apply to flex containers */
+	justify-content: space-evenly; /* spreads out items evenly */
+	border-bottom: solid 1px #757575;
+}
+
+.sub-item {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 4px;
+}
+.sub-item-2 {
+	display: flex;
+	flex-direction: column;
+	flex: 2; 
+	padding: 4px;
+}
+.container input {
+	height: 40px;
+	padding: 2px;
+	border: solid 1px #757575;
+	background-color: #2F2E35;
+	color: #757575;
+	text-transform: uppercase;
+
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important; /* or your background color */
+	-webkit-text-fill-color: #000 !important; /* your text color */
+}
+.submit{
+	margin-top: 10px;
+	background-color: transparent;
+	width: 30%;
+	height: 40px;
+	font-size: 32px;
+	color: white;
+	border: solid 2px white;
+}
+.submit :hover {
+	border: solid 2px #5CE1E6;
+	color: #5CE1E6;  
+}
+
+/*------------------------------------FOOTER SECTION------------------------------------*/
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: last baseline;
+	width: 100%;
+	height: 25vh;
+	background-color: #FF2E2E;
+	color: white;
+	padding: 40px;
+	text-align: left;
+}
+
+.footer h2 {
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.contact-info {
+	font-size: 16px;
+}
+
+.contact-info p {
+	margin: 8px 0;
+}
+
+.contact-info a,
+.contact-info a:visited,
+.contact-info a:hover,
+.contact-info a:active {
+	text-decoration: none;
+	color: white;
+}
+
+.contact-info i {
+	margin-right: 10px;
+	color: white;
+}
+
+.social-icons {
+	display: flex;
+	gap: 20px;
+}
+
+.social-icons a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	background-color: white;
+	color: #FF2E2E;
+	border-radius: 50%;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.social-icons a:hover {
+	background-color: #fff;
+	color: #C70000;
+}
+
+.social-icons i {
+	font-size: 20px;
+}
+

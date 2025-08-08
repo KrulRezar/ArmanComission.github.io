@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UY RECORDS</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="res/MainLogo.png" />
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-content">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="res/MainLogo.png" alt="UY Records Logo" />
+        </a>
+        
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+          <a href="about.html">ABOUT</a>
+          <a href="artists.html" style="color: #FF2E2E;">ARTISTS</a>
+          <a href="auditions.html">AUDITIONS</a>
+          <a href="studios.html">STUDIOS</a>
+          <a href="contact.html">CONTACTS</a>
+        </nav>
+      </div>
+    </header>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer class="footer-section">
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="contact-section">
+      <div class="CON_LEFT">
+        <p>LET'S MAKE <br />IT HAPPEN!</p>
+      </div>
+      <div class="CON_RIGHT">
+        <form id="save-form" class="contact-form">
+          <label for="message-box" class="form-label">Send us a message</label><br />
+          <textarea id="message-box" name="message" class="message-box form-textarea" rows="8" required></textarea>
+          <div class="submit-container">
+            <button type="submit">SAVE & GO TO FORM</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- COMPANY INFO AND SOCIAL MEDIA -->
+    <div class="footer-content">
+      <div class="contact-info" style="color: white;">
+        <span style="font-size: 48px; font-weight: bold;">UY RECORDS & ENTERTAINMENT</span>
+
+        <p>
+          <i class="fas fa-map-marker-alt"></i>
+          <a href="https://maps.app.goo.gl/CeYNwaDpe9FM5KpA6" target="_blank">
+            312 Ignacia Street, Tullahan Road, Santa Quiteria Rd, Caloocan, 1400 Metro Manila
+          </a>
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:yrecordsmangment2023@gmail.com">
+            uyrecordsmangment2023@gmail.com
+          </a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:+639760089750">
+            976 - 008 - 9750
+          </a>
+        </p>
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/uyrecordsent" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/Boss_StudioRBLX" target="_blank">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/uyrecordsentertainment/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/records-uy-128648209/" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+  <script>
+    document.getElementById("save-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const message = document.getElementById("message-box").value;
+      localStorage.setItem("userMessage", message);
+      window.location.href = "contact.html";
+    });
+  </script>
+
+</body>
+</html>
